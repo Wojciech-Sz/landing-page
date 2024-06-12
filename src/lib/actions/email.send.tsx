@@ -6,7 +6,7 @@ const resend = new Resend(
   process.env.NEXT_PUBLIC_RESEND_API_KEY
 );
 
-export async function POST({
+export async function send({
   firstName,
   secondName,
   phoneNumber,
@@ -17,7 +17,7 @@ export async function POST({
   try {
     const { data, error } = await resend.emails.send({
       from: email,
-      to: ["wojtek.bakugan@gmail.com"],
+      to: ["w.szczygielski00@gmail.com"],
       subject,
       react: EmailTemplate({
         firstName,

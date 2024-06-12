@@ -15,8 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { POST } from "@/app/api/send/route";
 import { Checkbox } from "../ui/checkbox";
+import { send } from "@/lib/actions/email.send";
 
 const ContactForm = () => {
   const initialValues = {
@@ -36,8 +36,7 @@ const ContactForm = () => {
   const onSubmit = async (
     values: z.infer<typeof formSchema>
   ) => {
-    console.log(values);
-    await POST({ ...values });
+    send({ ...values });
   };
 
   return (
