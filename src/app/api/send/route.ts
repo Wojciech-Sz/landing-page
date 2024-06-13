@@ -1,30 +1,19 @@
+"use server";
 import EmailTemplate from "@/components/emails/EmailTemplate";
-import { ContactFormProps } from "@/types";
+
 import { Resend } from "resend";
 
-const resend = new Resend(
-  process.env.NEXT_PUBLIC_RESEND_API_KEY
-);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function send({
-  firstName,
-  secondName,
-  phoneNumber,
-  email,
-  subject,
-  message,
-}: ContactFormProps) {
+export async function POST(req: Request, res: Response) {
   try {
+    const { firstName } = req.body;
+    console.log(firstName);
     const { data, error } = await resend.emails.send({
-      from: email,
+      from: "Acme <onboarding@resend.dev>",
       to: ["w.szczygielski00@gmail.com"],
-      subject,
-      react: EmailTemplate({
-        firstName,
-        secondName,
-        phoneNumber,
-        message,
-      }),
+      subject: "elo",
+      react: EmailTemplate({ firstName: "ala" }),
     });
 
     if (error) {

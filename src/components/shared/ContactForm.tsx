@@ -16,8 +16,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "../ui/checkbox";
-import { send } from "@/lib/actions/email.send";
-
 const ContactForm = () => {
   const initialValues = {
     firstName: "",
@@ -36,7 +34,17 @@ const ContactForm = () => {
   const onSubmit = async (
     values: z.infer<typeof formSchema>
   ) => {
-    send({ ...values });
+    console.log(values);
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+
+    const data = await response.json();
+    console.log(data);
   };
 
   return (

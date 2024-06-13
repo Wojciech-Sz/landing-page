@@ -12,16 +12,16 @@ import * as React from "react";
 
 type Props = {
   firstName: string;
-  secondName: string;
-  phoneNumber: string;
-  message: string;
+  // secondName: string;
+  // phoneNumber: string;
+  // message: string;
 };
 
 const EmailTemplate = ({
   firstName,
-  secondName,
-  phoneNumber,
-  message,
+  // secondName,
+  // phoneNumber,
+  // message,
 }: Props) => {
   return (
     <Html>
@@ -32,7 +32,10 @@ const EmailTemplate = ({
       </Preview>
       <Body style={main}>
         <Container style={container}>
-          <Text style={paragraph}>Hi {firstName},</Text>
+          <Text style={paragraph}>
+            Hi {firstName}
+            {"phoneNumber"},
+          </Text>
           <Text style={paragraph}>
             Welcome to Koala, the sales intelligence
             platform that helps you uncover qualified leads
