@@ -5,7 +5,7 @@ const Offer = () => {
   return (
     <section
       id="services"
-      className="w-full py-12 md:py-24 lg:py-32"
+      className="w-full  bg-gradient-to-b from-white to-[#f0f8ff] py-12 md:py-24 lg:py-32"
     >
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-5xl space-y-8">
@@ -21,7 +21,7 @@ const Offer = () => {
             {offers.map((offer, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4"
+                className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left"
               >
                 {offer.icon}
                 <div>

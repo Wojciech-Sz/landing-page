@@ -55,6 +55,8 @@ const config = {
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        kaushan: ["var(--font-kaushan-script)"],
+        caudex: ["var(--font-caudex)"],
       },
       borderRadius: {
         lg: "var(--radius)",

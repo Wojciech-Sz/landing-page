@@ -4,7 +4,7 @@ export type IconProps = {
 
 export type ContactFormProps = {
   firstName: string;
-  secondName: string;
+  lastName: string;
   phoneNumber: string;
   email: string;
   subject: string;

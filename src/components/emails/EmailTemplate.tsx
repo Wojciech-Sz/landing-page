@@ -5,53 +5,36 @@ import {
   Hr,
   Html,
   Preview,
-  Section,
   Text,
 } from "@react-email/components";
 import * as React from "react";
 
 type Props = {
   firstName: string;
-  // secondName: string;
-  // phoneNumber: string;
-  // message: string;
+  lastName: string;
+  phoneNumber: string;
+  message: string;
+  email: string;
 };
 
 const EmailTemplate = ({
   firstName,
-  // secondName,
-  // phoneNumber,
-  // message,
+  lastName,
+  phoneNumber,
+  message,
+  email,
 }: Props) => {
   return (
     <Html>
       <Head />
-      <Preview>
-        The sales intelligence platform that helps you
-        uncover qualified leads.
-      </Preview>
+      <Preview>Formularz kontaktowy.</Preview>
       <Body style={main}>
         <Container style={container}>
           <Text style={paragraph}>
-            Hi {firstName}
-            {"phoneNumber"},
+            {firstName} {lastName} {phoneNumber} {email},
           </Text>
-          <Text style={paragraph}>
-            Welcome to Koala, the sales intelligence
-            platform that helps you uncover qualified leads
-            and close deals faster.
-          </Text>
-          <Section style={btnContainer}></Section>
-          <Text style={paragraph}>
-            Best,
-            <br />
-            The Koala team
-          </Text>
+          <Text style={paragraph}>{message}</Text>
           <Hr style={hr} />
-          <Text style={footer}>
-            470 Noor Ave STE B #1148, South San Francisco,
-            CA 94080
-          </Text>
         </Container>
       </Body>
     </Html>
@@ -76,16 +59,7 @@ const paragraph = {
   lineHeight: "26px",
 };
 
-const btnContainer = {
-  textAlign: "center" as const,
-};
-
 const hr = {
   borderColor: "#cccccc",
   margin: "20px 0",
-};
-
-const footer = {
-  color: "#8898aa",
-  fontSize: "12px",
 };

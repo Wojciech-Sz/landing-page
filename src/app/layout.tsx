@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { caudex, kaushanScript } from "./fonts";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={poppins.variable}>{children}</body>
+      <body
+        className={`${poppins.variable} ${kaushanScript.variable} ${caudex.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

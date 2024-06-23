@@ -10,7 +10,7 @@ export const formSchema = z
       .max(50, {
         message: "Imię nie może przekraczać 50 znaków.",
       }),
-    secondName: z
+    lastName: z
       .string()
       .min(2, {
         message: "Nazwisko musi mieć co najmniej 2 znaki.",

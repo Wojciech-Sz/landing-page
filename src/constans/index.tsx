@@ -1,72 +1,202 @@
 import {
   BriefcaseIcon,
   Building2Icon,
+  FacebookIcon,
   FileTextIcon,
+  InstagramIcon,
   MapIcon,
   RefreshCwIcon,
   SettingsIcon,
+  TwitterIcon,
 } from "@/components/Icons";
+import Link from "next/link";
 
 export const headerLinks = [
   {
     label: "O Nas",
-    route: "#about",
+    route: "/#about",
   },
   {
     label: "Projekty",
-    route: "#projects",
+    route: "/#projects",
   },
   {
     label: "Usługi",
-    route: "#services",
+    route: "/#services",
   },
 ];
 
 export const team = [
-  "Imię Nazwisko",
-  "Imię Nazwisko",
-  "Imię Nazwisko",
-  "Imię Nazwisko",
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
+  {
+    firstName: "Imię",
+    lastName: "Nazwisko",
+    role: "Stanowisko",
+  },
 ];
 
 export const coop = [
-  "firma 1",
-  "firma 2",
-  "firma 3",
-  "firma 4",
-  "firma 5",
+  { name: "firma 1", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 2", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 3", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 4", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 5", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 6", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 7", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 8", logo: "/assets/icons/yourlogo.svg" },
+  { name: "firma 9", logo: "/assets/icons/yourlogo.svg" },
 ];
 
 export const projects = [
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house1-1.jpg",
     label: "Projekt 1",
-    href: "#",
+    href: "/project/1",
+    id: 1,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: [
+      "/assets/images/house1-1.jpg",
+      "/assets/images/house1-2.jpg",
+      "/assets/images/house1-3.jpg",
+      "/assets/images/house1-4.jpg",
+    ],
   },
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house1-1.jpg",
     label: "Projekt 2",
-    href: "#",
+    href: "/project/2",
+    id: 2,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: [
+      "/assets/images/house1-1.jpg",
+      "/assets/images/house1-2.jpg",
+      "/assets/images/house1-3.jpg",
+      "/assets/images/house1-4.jpg",
+    ],
   },
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house1-1.jpg",
     label: "Projekt 3",
-    href: "#",
+    href: "/project/3",
+    id: 3,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: [
+      "/assets/images/house1-1.jpg",
+      "/assets/images/house1-2.jpg",
+      "/assets/images/house1-3.jpg",
+      "/assets/images/house1-4.jpg",
+    ],
   },
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house2-1.jpg",
     label: "Projekt 4",
-    href: "#",
+    href: "/project/4",
+    id: 4,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: {
+      image1: "/assets/images/house2-1.jpg",
+      image2: "/assets/images/house2-2.jpg",
+      image3: "/assets/images/house2-3.jpg",
+      image4: "/assets/images/house2-4.jpg",
+    },
   },
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house2-1.jpg",
     label: "Projekt 5",
-    href: "#",
+    href: "/project/5",
+    id: 5,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: [
+      "/assets/images/house2-1.jpg",
+      "/assets/images/house2-2.jpg",
+      "/assets/images/house2-3.jpg",
+      "/assets/images/house2-4.jpg",
+    ],
   },
   {
-    image: "/assets/images/house-inside.jpg",
+    image: "/assets/images/house2-1.jpg",
     label: "Projekt 6",
-    href: "#",
+    href: "/project/6",
+    id: 6,
+    details: {
+      livingUA: "1000",
+      totalUA: "2000",
+      buildingArea: "3000",
+      volume: "4000",
+      localization: "Warszawa",
+      price: "5000",
+      description: "",
+    },
+    images: [
+      "/assets/images/house2-1.jpg",
+      "/assets/images/house2-2.jpg",
+      "/assets/images/house2-3.jpg",
+      "/assets/images/house2-4.jpg",
+    ],
   },
 ];
 
@@ -76,7 +206,7 @@ export const offers = [
     description:
       "Budowa domu jednorodzinnego musi być przemyślana. w cenie projektu domu otrzymasz profesjonalne konsultacje doświadczonego architekta.",
     icon: (
-      <BriefcaseIcon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <BriefcaseIcon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
   {
@@ -84,7 +214,7 @@ export const offers = [
     description:
       "Pomagamy naszym Klientom w załatwianiu spraw w urzędach, opcjonalnie nadzorujemy procesy wydawania warunków zabudowy oraz pozwoleń na budowę.",
     icon: (
-      <FileTextIcon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <FileTextIcon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
   {
@@ -92,7 +222,7 @@ export const offers = [
     description:
       "Posiadamy doświadczenie w projektowaniu budynków handlowo - usługowych oraz biurowych. Zapraszamy przedsiębiorców do współpracy.",
     icon: (
-      <Building2Icon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <Building2Icon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
   {
@@ -100,7 +230,7 @@ export const offers = [
     description:
       "Oferujemy usługę adaptacji zakupionych przez Państwa projektów do działki inwestorów na terenie podlaskim.",
     icon: (
-      <SettingsIcon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <SettingsIcon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
   {
@@ -108,7 +238,7 @@ export const offers = [
     description:
       "Dzięki współpracy z doświadczonymi geodetami oferujemy usługi w zakresie realizacji map do celów projektowych oraz wyznaczenia budynku na działce.",
     icon: (
-      <MapIcon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <MapIcon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
   {
@@ -116,14 +246,49 @@ export const offers = [
     description:
       "Wykonujemy również projekty indywidualne adaptacji starszych budynków oraz ich modernizacji, przebudowy czy zmian sposobu użytkowania.",
     icon: (
-      <RefreshCwIcon className="size-6 shrink-0 text-gray-900 dark:text-gray-50" />
+      <RefreshCwIcon className="size-8 shrink-0 text-gray-900 dark:text-gray-50" />
     ),
   },
 ];
 
 export const footerLinks = [
-  "Link1",
-  "Link2",
-  "Link3",
-  "Link4",
+  {
+    icon: (
+      <Link
+        href="https://www.facebook.com/"
+        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
+        prefetch={false}
+        target="_blank"
+      >
+        <FacebookIcon className="size-6" />
+        <span className="sr-only">Facebook</span>
+      </Link>
+    ),
+  },
+  {
+    icon: (
+      <Link
+        href="https://x.com/home?lang=pl"
+        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
+        prefetch={false}
+        target="_blank"
+      >
+        <TwitterIcon className="size-6" />
+        <span className="sr-only">Twitter</span>
+      </Link>
+    ),
+  },
+  {
+    icon: (
+      <Link
+        href="https://www.instagram.com/"
+        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
+        prefetch={false}
+        target="_blank"
+      >
+        <InstagramIcon className="size-6" />
+        <span className="sr-only">Instagram</span>
+      </Link>
+    ),
+  },
 ];

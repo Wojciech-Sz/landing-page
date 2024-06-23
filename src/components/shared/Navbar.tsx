@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link
           key={i}
           href={link.route}
-          className="text-sm font-medium transition-colors hover:text-gray-900 dark:hover:text-gray-50"
+          className="text-lg font-semibold text-gray-900 transition-colors hover:text-gray-600 dark:hover:text-gray-50"
           prefetch={false}
         >
           {link.label}

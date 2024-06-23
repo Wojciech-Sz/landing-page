@@ -19,7 +19,7 @@ import { Checkbox } from "../ui/checkbox";
 const ContactForm = () => {
   const initialValues = {
     firstName: "",
-    secondName: "",
+    lastName: "",
     phoneNumber: "",
     email: "",
     subject: "",
@@ -34,9 +34,9 @@ const ContactForm = () => {
   const onSubmit = async (
     values: z.infer<typeof formSchema>
   ) => {
-    console.log(values);
     const response = await fetch("/api/send", {
       method: "POST",
+      cache: "no-store",
       headers: {
         "Content-Type": "application/json",
       },
@@ -44,13 +44,16 @@ const ContactForm = () => {
     });
 
     const data = await response.json();
-    console.log(data);
+    console.log("fetch response:", data);
   };
 
   return (
     <div className="mx-auto max-w-md space-y-6">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          className="flex flex-col gap-3"
+          onSubmit={form.handleSubmit(onSubmit)}
+        >
           {/* Imię */}
           <FormField
             control={form.control}
@@ -68,7 +71,7 @@ const ContactForm = () => {
           {/* Nazwisko */}
           <FormField
             control={form.control}
-            name="secondName"
+            name="lastName"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -149,7 +152,7 @@ const ContactForm = () => {
             control={form.control}
             name="agree"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border bg-white p-4">
                 <FormControl>
                   <Checkbox
                     checked={field.value}
@@ -159,14 +162,18 @@ const ContactForm = () => {
                 <div className="space-y-1 leading-none">
                   <FormDescription>
                     Wyrażam zgodę na przetwarzanie moich
-                    danych osobowych.
+                    danych osobowych. Administratorem danych
+                    jest. Dane zostaną wykorzystane w celu
+                    odpowiedzi na zadane pytanie oraz w
+                    celach marketingowych wraz z
+                    profilowaniem.
                   </FormDescription>
                 </div>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Wyślij</Button>
         </form>
       </Form>
     </div>

@@ -14,21 +14,21 @@ export default function Header() {
   return (
     <header className=" fixed inset-x-0 z-10 flex items-center justify-between bg-white/90 px-4 py-3 shadow-sm dark:bg-gray-950 md:px-6 md:py-4">
       <Link
-        href="#"
+        href="/"
         className="flex items-center"
         prefetch={false}
       >
-        <MountainIcon className="size-6" />
-        <span className="ml-2 text-lg font-semibold">
+        <MountainIcon className="size-7" />
+        <span className="ml-2 font-kaushan text-2xl font-bold">
           Architekt
         </span>
       </Link>
       <Navbar />
       <Button
         variant="default"
-        className="hidden md:inline-flex "
+        className="hidden text-base md:inline-flex"
       >
-        Kontakt
+        <Link href="/#contact">Kontakt</Link>
       </Button>
 
       <MobileMenu />
