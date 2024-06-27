@@ -24,7 +24,7 @@ const Partners = () => {
         </div>
         <Carousel
           opts={{ loop: true }}
-          className="mt-8 flex w-full max-w-3xl items-center justify-center"
+          className="mt-8 w-full max-w-3xl items-center"
         >
           <CarouselContent>
             {coop.map((item) => (
@@ -38,7 +38,7 @@ const Partners = () => {
                     width="140"
                     height="70"
                     alt="Partner Logo"
-                    className="w-full overflow-hidden rounded-lg bg-black object-contain object-center px-2 py-4 grayscale "
+                    className="aspect-[3/1] w-full overflow-hidden rounded-lg bg-black object-contain object-center px-2 py-4 grayscale "
                   />
                 </div>
               </CarouselItem>
