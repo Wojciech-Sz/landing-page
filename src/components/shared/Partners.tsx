@@ -24,7 +24,7 @@ const Partners = () => {
         </div>
         <Carousel
           opts={{ loop: true }}
-          className="mt-8 w-full max-w-3xl"
+          className="mt-8 flex w-full max-w-3xl items-center justify-center"
         >
           <CarouselContent>
             {coop.map((item) => (
