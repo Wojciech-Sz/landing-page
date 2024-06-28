@@ -14,13 +14,19 @@ import {
 
 export default function Testimonials() {
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f0f8ff] py-12 md:py-24 lg:py-32">
+    <section
+      id="testimonials"
+      className="w-full bg-gradient-to-b from-white to-[#f0f8ff] py-12 md:py-24 lg:py-32"
+    >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Opinie Naszych Klientów
           </h2>
-          <Carousel className="w-full max-w-3xl">
+          <Carousel
+            opts={{ loop: true }}
+            className="w-full max-w-3xl"
+          >
             <CarouselContent>
               <CarouselItem>
                 <div className="rounded-lg bg-white p-4 shadow-lg">

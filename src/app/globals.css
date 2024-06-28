@@ -82,4 +82,7 @@ h6 {
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
   }
+  .hero-title {
+    @apply mb-10 max-w-[60rem] text-balance text-5xl font-bold uppercase tracking-tighter text-gray-100 sm:text-6xl lg:text-pretty xl:text-7xl/none;
+  }
 }

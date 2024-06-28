@@ -9,12 +9,19 @@ import {
   SettingsIcon,
   TwitterIcon,
 } from "@/components/Icons";
-import Link from "next/link";
 
 export const headerLinks = [
   {
     label: "O Nas",
     route: "/#about",
+  },
+  {
+    label: "Współprace",
+    route: "/#partners",
+  },
+  {
+    label: "Opinie",
+    route: "/#testimonials",
   },
   {
     label: "Projekty",
@@ -253,42 +260,18 @@ export const offers = [
 
 export const footerLinks = [
   {
-    icon: (
-      <Link
-        href="https://www.facebook.com/"
-        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
-        prefetch={false}
-        target="_blank"
-      >
-        <FacebookIcon className="size-6" />
-        <span className="sr-only">Facebook</span>
-      </Link>
-    ),
+    href: "https://www.facebook.com/",
+    name: "Facebook",
+    icon: <FacebookIcon className="size-6" />,
   },
   {
-    icon: (
-      <Link
-        href="https://x.com/home?lang=pl"
-        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
-        prefetch={false}
-        target="_blank"
-      >
-        <TwitterIcon className="size-6" />
-        <span className="sr-only">Twitter</span>
-      </Link>
-    ),
+    href: "https://x.com/home?lang=pl",
+    name: "X",
+    icon: <TwitterIcon className="size-6" />,
   },
   {
-    icon: (
-      <Link
-        href="https://www.instagram.com/"
-        className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
-        prefetch={false}
-        target="_blank"
-      >
-        <InstagramIcon className="size-6" />
-        <span className="sr-only">Instagram</span>
-      </Link>
-    ),
+    href: "https://www.instagram.com/",
+    name: "Instagram",
+    icon: <InstagramIcon className="size-6" />,
   },
 ];

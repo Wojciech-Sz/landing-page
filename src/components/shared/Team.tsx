@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Avatar,
@@ -8,7 +9,7 @@ import { team } from "@/constans";
 
 const Team = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#f0f8ff] to-white py-12 dark:bg-gray-800 md:py-24 lg:py-32">
+    <section className="w-full bg-gradient-to-b from-[#f0f8ff] to-white pb-12 dark:bg-gray-800 md:pb-24 lg:pb-32">
       <div className="container px-4 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">

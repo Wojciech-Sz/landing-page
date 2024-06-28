@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "../ui/checkbox";
+import { useToast } from "../ui/use-toast";
 const ContactForm = () => {
   const initialValues = {
     firstName: "",
@@ -30,6 +31,7 @@ const ContactForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: { ...initialValues },
   });
+  const { toast } = useToast();
 
   const onSubmit = async (
     values: z.infer<typeof formSchema>
@@ -45,6 +47,11 @@ const ContactForm = () => {
 
     const data = await response.json();
     console.log("fetch response:", data);
+
+    form.reset();
+    toast({
+      title: "Wiadomość została wysłana pomyślnie!",
+    });
   };
 
   return (
@@ -164,16 +171,23 @@ const ContactForm = () => {
                     Wyrażam zgodę na przetwarzanie moich
                     danych osobowych. Administratorem danych
                     jest. Dane zostaną wykorzystane w celu
-                    odpowiedzi na zadane pytanie oraz w
-                    celach marketingowych wraz z
-                    profilowaniem.
+                    odpowiedzi na zadane pytanie.
                   </FormDescription>
                 </div>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Wyślij</Button>
+          <Button
+            type="submit"
+            size="lg"
+            disabled={form.formState.isSubmitting}
+            className="w-full"
+          >
+            {form.formState.isSubmitting
+              ? "Wysyłanie..."
+              : "Wyslij"}
+          </Button>
         </form>
       </Form>
     </div>

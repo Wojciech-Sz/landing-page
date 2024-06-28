@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
@@ -29,13 +30,15 @@ const About = () => {
               </p>
             </div>
           </div>
-          <Image
-            src="/assets/images/house-inside.jpg"
-            width="550"
-            height="310"
-            alt="About"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full md:self-center"
-          />
+          <div>
+            <Image
+              src="/assets/images/house-inside.jpg"
+              width="550"
+              height="310"
+              alt="About"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full md:self-center"
+            />
+          </div>
         </div>
       </div>
     </section>

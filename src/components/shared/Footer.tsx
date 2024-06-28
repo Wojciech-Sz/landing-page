@@ -28,7 +28,15 @@ const Footer = () => {
               className="flex size-10 items-center justify-center"
               key={i}
             >
-              {link.icon}
+              <Link
+                href={link.href}
+                className="text-gray-500 hover:text-white dark:text-gray-400 dark:hover:text-gray-50"
+                prefetch={false}
+                target="_blank"
+              >
+                {link.icon}
+                <span className="sr-only">{link.name}</span>
+              </Link>
             </li>
           ))}
         </ul>

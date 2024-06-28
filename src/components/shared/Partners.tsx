@@ -11,7 +11,10 @@ import { coop } from "@/constans";
 
 const Partners = () => {
   return (
-    <section className="w-full py-12  md:py-24 lg:py-32">
+    <section
+      id="partners"
+      className="w-full py-12  md:py-24 lg:py-32"
+    >
       <div className="container flex flex-col items-center px-4 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
